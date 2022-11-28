@@ -1,0 +1,11 @@
+{
+  "APP_NAME": "経費精算メモ",
+  "EXPENSE_ITEM": "費目",
+  "COST": "金額",
+  "TOTAL": "合計",
+  "ADD": "追加",
+  "COPY": "コピー",
+  "COPIED_MESSAGE": "クリップボードにコピーしました",
+  "HINT_EXPENSE_ITEM": "費目を入力",
+  "HINT_COST": "金額を入力"
+}

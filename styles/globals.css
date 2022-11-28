@@ -11,6 +11,30 @@ a {
   text-decoration: none;
 }
 
+.input {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+}
+
+.tableList {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.totalLine {
+  background-color: lavender;
+}
+
+.tableHeader {
+  color: white;
+  background-color: navy;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -1,0 +1,10 @@
+{
+  "APP_NAME": "Expense memo",
+  "EXPENSE_ITEM": "Expense item",
+  "COST": "Cost",
+  "TOTAL": "Total",
+  "ADD": "Add",
+  "COPY": "Copy",
+  "HINT_EXPENSE_ITEM": "Enter item",
+  "HINT_COST": "Enter cost"
+}
