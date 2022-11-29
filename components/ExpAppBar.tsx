@@ -62,6 +62,7 @@ const ExpAppBar = () => {
           aria-haspopup="true"
           onClick={onDelete}
           color="inherit"
+          disabled={exps.length === 0}
         >
           <DeleteIcon />
         </IconButton>
@@ -72,6 +73,7 @@ const ExpAppBar = () => {
           aria-haspopup="true"
           onClick={onOutput}
           color="inherit"
+          disabled={exps.length === 0}
         >
           <OutputIcon />
         </IconButton>
