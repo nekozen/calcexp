@@ -42,6 +42,14 @@ const ExpForm = () => {
     setExpLabel('');
     setExpCost('');
   };
+  const styleInput = {
+    marginLeft: '2rem',
+    marginRight: '2rem',
+    marginTop: '1.5rem',
+    marginBottom: '1rem',
+    verticalAlign: 'middle',
+  };
+
   return (
     <div>
       <TextField
@@ -49,7 +57,7 @@ const ExpForm = () => {
         onChange={onExpLabelChanged}
         variant="outlined"
         label={t('HINT_EXPENSE_ITEM')}
-        className="input"
+        sx={styleInput}
       />
       <TextField
         value={expCost}
@@ -57,9 +65,9 @@ const ExpForm = () => {
         variant="outlined"
         type="number"
         label={t('HINT_COST')}
-        className="input"
+        sx={styleInput}
       />
-      <Button onClick={onClickAdd} className="input" variant="outlined">
+      <Button onClick={onClickAdd} sx={styleInput} variant="outlined">
         {t('ADD')}
       </Button>
     </div>

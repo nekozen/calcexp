@@ -5,9 +5,12 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
 import Paper from '@mui/material/Paper';
 import { useTranslation } from 'next-i18next';
 import Exp from '../types/Exp';
+import ExpItem from './ExpItem';
 
 const ExpTable = () => {
   const { t } = useTranslation('common');
@@ -15,29 +18,42 @@ const ExpTable = () => {
     return state.exps;
   });
 
+  const styleTable = {
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
+    paddingTop: '0.5rem',
+    paddingBottom: '1rem',
+  };
+  const styleTableHeader = {
+    color: 'white',
+    backgroundColor: 'navy',
+  };
+  const styleTotalLine = {
+    backgroundColor: 'lavender',
+  };
+
   return (
-    <TableContainer component={Paper} className="tableList">
+    <TableContainer component={Paper} sx={styleTable}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell align="center" className="tableHeader">
+            <TableCell align="center" sx={styleTableHeader}>
               {t('EXPENSE_ITEM')}
             </TableCell>
-            <TableCell align="right" className="tableHeader">
+            <TableCell align="right" sx={styleTableHeader}>
               {t('COST')}
             </TableCell>
+            <TableCell sx={styleTableHeader} size="small"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {exps.map((exp) => (
-            <TableRow key={exp.id}>
-              <TableCell>{exp.label}</TableCell>
-              <TableCell align="right">{exp.cost}</TableCell>
-            </TableRow>
+            <ExpItem exp={exp} key={exp.id} />
           ))}
-          <TableRow className="totalLine">
+          <TableRow sx={styleTotalLine}>
             <TableCell>{t('TOTAL')}</TableCell>
             <TableCell align="right">{calSum(exps)}</TableCell>
+            <TableCell size="small"></TableCell>
           </TableRow>
         </TableBody>
       </Table>
