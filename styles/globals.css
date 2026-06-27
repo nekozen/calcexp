@@ -23,4 +23,27 @@ a {
     color: white;
     background: black;
   }
+
+  input,
+  textarea,
+  select,
+  button,
+  .MuiInputBase-input,
+  .MuiOutlinedInput-input {
+    color: white;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .MuiFormLabel-root,
+  .MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.23);
+  }
 }
