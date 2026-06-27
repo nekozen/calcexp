@@ -5,6 +5,7 @@
   "TOTAL": "Total",
   "ADD": "Add",
   "COPY": "Copy",
+  "COPIED_MESSAGE": "Copied to clipboard.",
   "HINT_EXPENSE_ITEM": "Enter item",
   "HINT_COST": "Enter cost"
 }
